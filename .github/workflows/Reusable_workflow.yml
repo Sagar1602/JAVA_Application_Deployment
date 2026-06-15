@@ -4,7 +4,7 @@ on:
 jobs:
 
   workspace_cleanup:
-    runs_on: self-hosted
+    runs-on: self-hosted
     steps:
       - name: cleaning the workspace 
         run: rm -rf * .git .github .gradle
