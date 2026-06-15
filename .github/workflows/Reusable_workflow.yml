@@ -7,7 +7,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: cleaning the workspace 
-        run: rm -rf * .git .github .gradle
+        run: rm -rf * $GITHUB_WORKSPACE/*
 
   code_checkout:
     needs: workspace_cleanup
@@ -20,6 +20,15 @@ jobs:
     needs: code_checkout
     runs-on: self-hosted
     steps:
+      - name: Verify Files
+        run: |
+          pwd
+          ls -ltr
+
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x gradlew    
+
+        
       - name: buiding the application
         run: ./gradlew clean bootJar 
 
