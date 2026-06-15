@@ -30,7 +30,7 @@ jobs:
           gradle -v 
 
       - name: Make Gradle Wrapper Executable
-        run: chmod +x gradlew    
+        run: chmod +x gradle    
 
 
       - name: buiding the application
