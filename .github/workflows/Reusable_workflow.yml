@@ -35,5 +35,5 @@ jobs:
 
       - name: buiding the application
         run: |
-          gradlew clean bootJar 
+          ./gradlew clean bootJar 
 
