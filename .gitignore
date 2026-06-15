@@ -1,0 +1,63 @@
+# Gradle
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+*.gradle.kts
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Log files
+*.log
+logs/
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+
+# IDE run configurations
+.run/
+
+# Environment variables
+.env
+.env.local
+
+# Node modules (if using any frontend)
+node_modules/
+package-lock.json
+yarn.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Application files
+*.properties.local
+application-local.properties
