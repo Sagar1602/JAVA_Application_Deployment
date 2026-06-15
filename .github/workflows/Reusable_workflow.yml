@@ -25,10 +25,15 @@ jobs:
           pwd
           ls -ltr
 
+      - name: verify gradle
+        run: |
+          gradle -v 
+
       - name: Make Gradle Wrapper Executable
         run: chmod +x gradlew    
 
-        
+
       - name: buiding the application
-        run: ./gradlew clean bootJar 
+        run: |
+          gradle clean bootJar 
 
