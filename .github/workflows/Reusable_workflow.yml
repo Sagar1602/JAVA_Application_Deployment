@@ -1,6 +1,6 @@
 name: Reusable_workflow1
 on: push
-Jobs:
+jobs:
 
   workspace_cleanup:
     runs_on: self-hosted
