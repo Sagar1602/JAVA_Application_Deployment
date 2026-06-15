@@ -27,7 +27,7 @@ release.properties
 
 # Java
 *.class
-*.jar
+!*.jar
 *.war
 *.ear
 *.zip
