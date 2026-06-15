@@ -30,10 +30,10 @@ jobs:
           gradle -v 
 
       - name: Make Gradle Wrapper Executable
-        run: chmod +x gradle    
+        run: chmod +x gradlew    
 
 
       - name: buiding the application
         run: |
-          gradle clean bootJar 
+          gradlew clean bootJar 
 
