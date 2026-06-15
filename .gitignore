@@ -1,9 +1,9 @@
 # Gradle
 .gradle/
 build/
-gradle/
-gradlew
-gradlew.bat
+!gradle/
+!gradlew
+!gradlew.bat
 *.gradle.kts
 
 # IDE
