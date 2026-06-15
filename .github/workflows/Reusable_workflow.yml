@@ -35,7 +35,10 @@ jobs:
 
       - name: verify gradle
         run: |
-          gradle -v   
+          gradle -v
+
+      - name: Make Gradle Wrapper Executable
+        run: chmod +x gradlew    
 
 
       - name: buiding the application
