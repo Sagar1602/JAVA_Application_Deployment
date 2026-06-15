@@ -1,0 +1,24 @@
+name: Reusable_workflow1
+on: push
+Jobs:
+
+  workspace_cleanup:
+    runs_on: self-hosted
+    steps:
+      - name: cleaning the workspace 
+        run: rm -rf * .git .github .gradle
+
+  code_checkout:
+    needs: workspace_cleanup
+    runs-on: self-hosted
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+  
+  build:
+    needs: code_checkout
+    runs-on: self-hosted
+    steps:
+      - name: buiding the application
+        run: ./gradlew clean bootJar 
+
