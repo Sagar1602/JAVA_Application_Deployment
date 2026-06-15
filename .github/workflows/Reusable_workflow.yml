@@ -3,11 +3,13 @@ on: [workflow_call]
 jobs:
 
   workspace_cleanup:
+    runs-on: ubuntu-latest
     steps:
       - name: cleaning the workspace 
         run: rm -rf * $GITHUB_WORKSPACE/*
 
   code_checkout:
+    runs-on: ubuntu-latest
     needs: workspace_cleanup
     
     steps:
@@ -16,7 +18,7 @@ jobs:
   
   build:
     needs: code_checkout
-    
+    runs-on: ubuntu-latest
     steps:
       - name: java install
         uses: actions/setup-java@v4
