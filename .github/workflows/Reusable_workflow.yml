@@ -20,6 +20,14 @@ jobs:
     needs: code_checkout
     runs-on: self-hosted
     steps:
+      - name: java install
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+          
       - name: Verify Files
         run: |
           pwd
@@ -27,7 +35,10 @@ jobs:
 
       - name: verify gradle
         run: |
-          gradle -v 
+          gradle -v
+
+      - name: Set JAVA_HOME
+        run: echo "JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64" >> $GITHUB_ENV
 
       - name: Make Gradle Wrapper Executable
         run: chmod +x gradlew    
