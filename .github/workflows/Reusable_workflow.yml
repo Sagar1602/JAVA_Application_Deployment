@@ -1,5 +1,6 @@
 name: Reusable_workflow1
-on: push
+on: 
+  - push
 jobs:
 
   workspace_cleanup:
